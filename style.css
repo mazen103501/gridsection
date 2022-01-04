@@ -1,0 +1,99 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+
+    background: hsl(210, 46%, 95%);
+    font-size: 13px;
+}
+.cont{
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+.card{
+    padding: 20px 20px 10px;
+    background: white;
+    margin: 10px;
+    color: white;
+    border-radius: 10px;
+    position: relative;
+}
+.card .info{
+    display: flex;
+    margin-bottom: 10px;
+    position: relative;
+}
+.card .info img{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 1px solid white;
+}
+.card .info .name{
+    color: hsl(210, 46%, 95%);
+}
+.card .info .name p{
+    font-size: 11px;
+    margin-bottom: 5px;
+}
+.card .info .name p:last-of-type{
+    margin-top: -2px;
+    opacity: 0.5;
+}
+.card .text1{
+    font-size: 16px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.card .text2{
+    font-size: 11px;
+    opacity: 0.7;
+    position: relative;
+}
+.cont .card:first-of-type{
+    position: relative;
+    background: hsl(263, 55%, 52%);
+    grid-column: 1/span 3;
+}
+.cont .card:first-of-type .q{
+    position: absolute;
+    right: 20px;
+}
+
+.cont .card:nth-child(2){
+    background:hsl(217, 19%, 35%) ;
+}
+.cont .card:nth-child(3){
+    grid-row: span 2;
+}
+.cont .card:last-of-type{
+    background: hsl(219, 29%, 14%);
+    grid-column: span 3;
+}
+.cont .card:nth-child(3),.cont .card:nth-child(4){
+    color: black;
+}
+.cont .card:nth-child(3) .info .name p:first-of-type,.cont .card:nth-child(4) .info .name p:first-of-type{
+    color :rgb(0, 0, 0);
+    
+}
+.cont .card:nth-child(3) .info .name p:last-of-type,.cont .card:nth-child(4) .info .name p:last-of-type{
+    color :rgb(0, 0, 0);
+}
+
+@media (max-width:730px){
+    .cont{
+        grid-template-columns: auto;
+    }
+    .cont .card{
+        grid-column: 1;
+    }
+    .cont .card:first-of-type .q img{
+        width: 100px;
+    }
+}
